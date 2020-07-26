@@ -1,0 +1,34 @@
+.main-container {
+    height: 100vh;
+    display: block;
+}
+
+.title-container {
+    font-size: 5em;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.title-content {
+    font-family: 'Satisfy', cursive;
+    position: relative;
+    top: 40vh;
+}
+
+.title-creative {
+    margin-bottom: -40px;
+}
+
+.title-design {
+    margin-top: -30px;
+}
+
+.slogan-container {
+    font-family: 'Gentium Basic', serif;
+    font-size: 2em;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 70vh;
+}
