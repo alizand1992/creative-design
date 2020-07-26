@@ -11,8 +11,8 @@ class Home extends React.Component {
           <div className="title-content title-design">Design</div>
         </div>
         <div className="slogan-container">
-          You have a dream<br />
-          We make it come to life
+          YOU HAVE A DREAM<br />
+          WE MAKE IT COME TO LIFE
         </div>
       </div>
     );
