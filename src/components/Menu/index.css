@@ -71,8 +71,8 @@
 .menu-icon {
     font-size: 3em;
     position: fixed;
-    top: 5vh;
-    right: 5vh;
+    top: 7vh;
+    right: 7vh;
     cursor: pointer;
     z-index: 998;
 }
@@ -156,4 +156,29 @@
         padding-left: 35px;
         color: darkgrey;
     }
+}
+
+/* Title */
+.title-container-menu {
+    font-size: 3em;
+    display: block;
+    text-align: center;
+    width: 200px;
+    position: fixed;
+    top: 5vh;
+    left: 5vh;
+    cursor: pointer;
+}
+
+.title-content-menu {
+    font-family: 'Satisfy', cursive;
+    position: relative;
+}
+
+.title-creative-menu {
+    margin-bottom: -30px;
+}
+
+.title-design-menu {
+    margin-top: -25px;
 }
