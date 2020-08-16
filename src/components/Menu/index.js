@@ -11,19 +11,28 @@ class Menu extends React.Component {
 
     this.state = {
       clName: '',
-      activeMenu: '',
     };
+  }
+
+  componentDidMount() {
+    if (!this.state.activeMenu) {
+      this.setActiveMenu(this.props.location.pathname);
+    }
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     const { pathname } = this.props.location;
 
     if (prevProps !== this.props) {
-      if (pathname === '/about') {
-        this.changeMenu('about')
-      } else {
-        this.changeMenu('')
-      }
+      this.setActiveMenu(pathname);
+    }
+  }
+
+  setActiveMenu = (pathname) => {
+    if (pathname === '/about') {
+      this.changeMenu('about')
+    } else {
+      this.changeMenu('')
     }
   }
 
@@ -45,15 +54,17 @@ class Menu extends React.Component {
 
     return (
       <React.Fragment>
-        {activeMenu !== '' &&
-          <Link to="/">
-            <div className="title-container-menu">
-              <div className="title-content-menu title-creative-menu">Creative</div>
-              <div className="title-content-menu title-design-menu">Design</div>
-            </div>
-          </Link>
-        }
-        <i className="material-icons menu-icon" onClick={this.openSlideMenu}>menu</i>
+        <div className="top-menu-container">
+          {activeMenu !== '' &&
+            <Link to="/">
+              <div className="title-container-menu">
+                <div className="title-content-menu title-creative-menu">Creative</div>
+                <div className="title-content-menu title-design-menu">Design</div>
+              </div>
+            </Link>
+          }
+          <i className="material-icons menu-icon" onClick={this.openSlideMenu}>menu</i>
+        </div>
         <SliderMenu closeSlideMenu={this.closeSlideMenu} clName={clName} changeMenu={this.changeMenu} />
       </React.Fragment>
     )
