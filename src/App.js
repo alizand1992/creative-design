@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Menu from './components/Menu';
 import About from './components/About';
+import Ali from "./components/About/Ali";
 
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
       <div className="App">
         <Menu />
         <Switch>
+          <Route path="/about/ali">
+            <Ali />
+          </Route>
           <Route path="/about" >
             <About />
           </Route>

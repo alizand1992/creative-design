@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './index.css';
+import {Link} from "react-router-dom";
 
 const About = () => {
   return (
@@ -17,10 +18,14 @@ const About = () => {
 
         <div className="images">
           <div className="image-container left-image">
-            <img src="/ali_profile.png" className="image" />
+            <Link to="/about/ali">
+              <img src="/ali_profile.png" className="image" />
+            </Link>
           </div>
           <div className="image-container right-image">
-            <img src="/polina_profile.jpeg" className="image" />
+            <Link to="/about/polina">
+              <img src="/polina_profile.jpeg" className="image" />
+            </Link>
           </div>
         </div>
       </div>
