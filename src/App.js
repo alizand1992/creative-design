@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Menu from './components/Menu';
 import About from './components/About';
 import Ali from "./components/About/Ali";
+import Polina from "./components/About/Polina";
 
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
         <Switch>
           <Route path="/about/ali">
             <Ali />
+          </Route>
+          <Route path="/about/polina">
+            <Polina />
           </Route>
           <Route path="/about" >
             <About />

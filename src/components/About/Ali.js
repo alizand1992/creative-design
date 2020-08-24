@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Ali.css';
+import './profile.css';
 
 const Ali = () => {
   return (
