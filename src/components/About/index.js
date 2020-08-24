@@ -16,11 +16,11 @@ const About = () => {
         MORIARE PRO AMICO?
 
         <div className="images">
-          <div className="image left-image">
-            Ali's Photo
+          <div className="image-container left-image">
+            <img src="/ali_profile.png" className="image" />
           </div>
-          <div className="image right-image">
-            Polina's Photo
+          <div className="image-container right-image">
+            <img src="/polina_profile.jpeg" className="image" />
           </div>
         </div>
       </div>
