@@ -1,0 +1,23 @@
+.title {
+    font-family: 'Gentium Basic', serif;
+    font-size: 3em;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 190px;
+}
+
+.content-container {
+    position: relative;
+    top: 283px;
+    width: 100%;
+}
+
+.profile-image {
+    width: 300px;
+}
+
+.about-ali {
+    font-family: 'Gentium Basic', serif;
+    font-size: 1.5em;
+}

@@ -1,3 +1,17 @@
+.top-menu-container {
+    width: 100%;
+    min-height: 180px;
+    position: fixed;
+    top: 0;
+    z-index: 950;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1)
+    );
+}
+
 .gray-overlay {
     position: fixed;
     top: 0;
@@ -71,8 +85,8 @@
 .menu-icon {
     font-size: 3em;
     position: fixed;
-    top: 5vh;
-    right: 5vh;
+    top: 7vh;
+    right: 7vh;
     cursor: pointer;
     z-index: 998;
 }
@@ -156,4 +170,29 @@
         padding-left: 35px;
         color: darkgrey;
     }
+}
+
+/* Title */
+.title-container-menu {
+    font-size: 3em;
+    display: block;
+    text-align: center;
+    width: 200px;
+    position: fixed;
+    top: 5vh;
+    left: 5vh;
+    cursor: pointer;
+}
+
+.title-content-menu {
+    font-family: 'Satisfy', cursive;
+    position: relative;
+}
+
+.title-creative-menu {
+    margin-bottom: -30px;
+}
+
+.title-design-menu {
+    margin-top: -25px;
 }
