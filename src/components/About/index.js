@@ -1,7 +1,8 @@
 import React from 'react';
 
+import '../Common/index.css';
 import './index.css';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -19,12 +20,12 @@ const About = () => {
         <div className="images">
           <div className="image-container left-image">
             <Link to="/about/ali">
-              <img src="/ali_profile.png" className="image" />
+              <img src="/ali_profile.png" className="image" alt="Ali's profile" />
             </Link>
           </div>
           <div className="image-container right-image">
             <Link to="/about/polina">
-              <img src="/polina_profile.jpeg" className="image" />
+              <img src="/polina_profile.jpeg" className="image" alt="Polina's profile" />
             </Link>
           </div>
         </div>

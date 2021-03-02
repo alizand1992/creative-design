@@ -1,0 +1,15 @@
+.service-container {
+    text-align: center;
+}
+
+.service-image-container {
+    background-color: #666666;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    vertical-align: middle;
+}
+
+.service-image {
+    margin-top: 20%;
+}

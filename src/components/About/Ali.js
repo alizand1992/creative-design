@@ -9,7 +9,7 @@ const Ali = () => {
       <div className="content-container row">
         <div className="col-1" />
         <div className="profile-image col col-3">
-          <img src="/ali_profile.png" className="image" />
+          <img src="/ali_profile.png" className="image" alt="Ali's profile" />
         </div>
         <div className="about-ali col col-6">
           LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. OMNES ENIM IUCUNDUM MOTUM,

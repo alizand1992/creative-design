@@ -15,7 +15,10 @@ class SliderMenu extends React.Component {
             <li className="menu-item" onClick={() => changeMenu('about_us')}>
               <Link className="menu-item-link" to="/about">ABOUT US</Link>
             </li>
-            <li className="menu-item" onClick={() => changeMenu('our_work')}>OUR WORK</li>
+            <li className="menu-item" onClick={() => changeMenu('our_services')}>
+              <Link className="menu-item-link" to="/services">OUR SERVICES</Link>
+            </li>
+            {/*<li className="menu-item" onClick={() => changeMenu('our_work')}>OUR WORK</li>*/}
             <li className="menu-item" onClick={() => changeMenu('contact_us')}>CONTACT US</li>
           </ul>
         </div>
