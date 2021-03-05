@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../Common/index.css';
 import './index.css';
@@ -6,6 +6,7 @@ import './index.css';
 import Service from './Service';
 
 const Services = () => {
+  const [currentService, setCurrentService] = useState();
   const services = [
     { name: 'Design', image: '/design.png' },
     { name: 'Code', image: '/code.png' },
@@ -19,7 +20,7 @@ const Services = () => {
       <div className="content">
         <div id="services-container">
           {services.map((service) => {
-            return <Service {...service} />
+            return <Service {...service} key={service.name} currentService={currentService} setCurrentService={setCurrentService} />
           })}
         </div>
       </div>

@@ -25,3 +25,52 @@
 .service-content {
     text-align: left;
 }
+
+@media (max-width: 375px) {
+    .service-container {
+        width: 120px;
+        padding: 0px;
+    }
+
+    .service-content {
+        display: none;
+    }
+
+    .service-image-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .service-image {
+        width: 65px
+    }
+
+    .display-for-small-screen {
+    }
+
+    .hide-for-small-screen {
+        display: none;
+    }
+
+    .service-click-animation {
+        animation-duration: 1s;
+        animation-name: slide-center;
+        animation-fill-mode: forwards;
+    }
+
+    .service-content.service-click-text-animation {
+        display: inline-block;
+    }
+
+    @keyframes slide-center {
+        from {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        to {
+            margin-right: 30%;
+            margin-left: 30%;
+        }
+    }
+}
