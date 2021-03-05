@@ -196,3 +196,24 @@
 .title-design-menu {
     margin-top: -25px;
 }
+
+
+@media (max-width: 375px) {
+    @keyframes menu-open {
+        from {
+            display: block;
+            width: 0;
+            color: #1E1E1E;
+        }
+
+        25% {
+            color: #1E1E1E;
+        }
+
+        to {
+            display: block;
+            width: 375px;
+            color: white;
+        }
+    }
+}

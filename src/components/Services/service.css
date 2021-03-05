@@ -27,7 +27,7 @@
     text-align: left;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1000px) {
     .service-container {
         width: 120px;
         padding: 0px;
