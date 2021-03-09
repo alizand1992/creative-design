@@ -27,10 +27,28 @@
     text-align: left;
 }
 
-@media (max-width: 1000px) {
+.service-link {
+    text-decoration: none;
+}
+
+.service-link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+@media (min-width: 425px) and (max-width: 850px) {
     .service-container {
-        width: 120px;
-        padding: 0px;
+        flex: 1 0 150px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .service-image-title-container {
+        width: 100%;
+    }
+
+    .service-container {
+        padding: 0;
     }
 
     .service-content {
@@ -46,45 +64,45 @@
         width: 65px
     }
 
-    .display-for-small-screen {
-    }
+    /*.display-for-small-screen {*/
+    /*}*/
 
-    .display-single {
-        animation-duration: 500ms;
-        animation-name: increase-width;
-        animation-fill-mode: forwards;
-    }
+    /*.display-single {*/
+    /*    animation-duration: 500ms;*/
+    /*    animation-name: increase-width;*/
+    /*    animation-fill-mode: forwards;*/
+    /*}*/
 
-    .hide-for-small-screen {
-        display: none;
-    }
+    /*.hide-for-small-screen {*/
+    /*    display: none;*/
+    /*}*/
 
-    .service-click-animation {
-        animation-duration: 1s;
-        animation-name: slide-center;
-        animation-fill-mode: forwards;
-    }
+    /*.service-click-animation {*/
+    /*    animation-duration: 1s;*/
+    /*    animation-name: slide-center;*/
+    /*    animation-fill-mode: forwards;*/
+    /*}*/
 
-    .service-content.service-click-text-animation {
-        display: block;
-    }
+    /*.service-content.service-click-text-animation {*/
+    /*    display: block;*/
+    /*}*/
 
-    @keyframes increase-width {
-        from {}
-        to {
-            width: 100%;
-        }
-    }
+    /*@keyframes increase-width {*/
+    /*    from {}*/
+    /*    to {*/
+    /*        width: 100%;*/
+    /*    }*/
+    /*}*/
 
-    @keyframes slide-center {
-        from {
-            margin-right: 0;
-            margin-left: 0;
-        }
+    /*@keyframes slide-center {*/
+    /*    from {*/
+    /*        margin-right: 0;*/
+    /*        margin-left: 0;*/
+    /*    }*/
 
-        to {
-            margin-right: 30%;
-            margin-left: 30%;
-        }
-    }
+    /*    to {*/
+    /*        margin-right: 30%;*/
+    /*        margin-left: 30%;*/
+    /*    }*/
+    /*}*/
 }

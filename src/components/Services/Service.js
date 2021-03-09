@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './service.css';
+import { Link } from 'react-router-dom';
 
 const Service = ({ name, image, currentService, setCurrentService }) => {
   console.log(currentService)
@@ -12,12 +13,14 @@ const Service = ({ name, image, currentService, setCurrentService }) => {
 
   return (
     <div className={serviceContainer} onClick={() => setCurrentService(name)}>
-      <div className={`service-image-title-container ${animation}`}>
-        <div className="service-image-container">
-          <img src={image} className="service-image" alt={`${name} service`}/>
+      <Link to={`/services/${name}`} className="service-link">
+        <div className={`service-image-title-container ${animation}`}>
+          <div className="service-image-container">
+            <img src={image} className="service-image" alt={`${name} service`}/>
+          </div>
+          <div className="service-title">{name}</div>
         </div>
-        <div className="service-title">{name}</div>
-      </div>
+      </Link>
       <div className={`service-content ${textAnimation}`}>
         LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. OMNES ENIM IUCUNDUM MOTUM,
         QUO SENSUS HILARETUR. QUAE CUM DIXISSET PAULUMQUE INSTITISSET, QUID EST? ECCE

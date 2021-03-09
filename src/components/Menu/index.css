@@ -199,6 +199,15 @@
 
 
 @media (max-width: 375px) {
+    .menu-item {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .menu-container {
+        padding-left: 0;
+    }
+
     @keyframes menu-open {
         from {
             display: block;
