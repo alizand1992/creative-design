@@ -2,7 +2,7 @@ import React from 'react';
 
 import './index.css';
 import SliderMenu from './SliderMenu';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class Menu extends React.Component {

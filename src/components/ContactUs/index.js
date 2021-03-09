@@ -2,7 +2,6 @@ import React from 'react';
 
 import '../Common/index.css';
 import FormRow from './FormRow';
-import Loading from '../Common/Loading';
 import { Spinner } from 'react-bootstrap';
 
 class ContactUs extends React.Component {
