@@ -1,0 +1,45 @@
+.contact-form-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.contact-form-column {
+    width: 487px;
+}
+
+.contact-input-text {
+    width: 487px;
+    background-color: black;
+    color: white;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: white;
+}
+
+.contact-input-text:focus {
+    border-width: 0 0 3px;
+}
+
+.contact-text-area {
+    width: 487px;
+    background-color: black;
+    color: white;
+    outline: 0;
+    border-width: 1px;
+    border-color: white;
+}
+
+.contact-text-area:focus {
+    border-width: 3px;
+}
+
+.submit {
+    width: 288px;
+    height: 68px;
+    background-color: #428CFA;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 45px;
+}

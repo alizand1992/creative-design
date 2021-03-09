@@ -7,6 +7,10 @@
     top: 190px;
 }
 
+.sub-title {
+    font-size: 2em;
+}
+
 .content {
     font-family: 'Gentium Basic', serif;
     font-size: 1.5em;

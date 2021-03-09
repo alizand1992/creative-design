@@ -3,13 +3,16 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './components/Home';
-import Menu from './components/Menu';
-import Services from './components/Services';
 import Loading from './components/Common/Loading';
-import Design from './components/Services/Design';
-import Code from './components/Services/Code';
-import Consult from './components/Services/Consult';
-import Upgrade from './components/Services/Upgrade';
+import Menu from './components/Menu';
+
+
+const Services = React.lazy(() => import('./components/Services'));
+const Design = React.lazy(() => import('./components/Services/Design'));
+const Code = React.lazy(() => import('./components/Services/Code'));
+const Consult = React.lazy(() => import('./components/Services/Consult'));
+const Upgrade = React.lazy(() => import('./components/Services/Upgrade'));
+const ContactUs = React.lazy(() => import('./components/ContactUs'));
 
 const About =  React.lazy(() => import('./components/About'));
 const Ali =  React.lazy(() => import('./components/About/Ali'));
@@ -45,6 +48,9 @@ function App() {
             </Route>
             <Route path="/services" >
               <Services />
+            </Route>
+            <Route path="/contact_us" >
+              <ContactUs />
             </Route>
             <Route path="/">
               <Home />
