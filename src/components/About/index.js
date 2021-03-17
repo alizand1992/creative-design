@@ -2,9 +2,21 @@ import React from 'react';
 
 import '../Common/index.css';
 import './index.css';
-import { Link } from "react-router-dom";
+import ProfilePicture from './ProfilePicture';
 
 const About = () => {
+  const profiles = [
+    {
+      image: '/ali_profile_2.png',
+      alt: 'Ali\'s profile',
+      url: 'https://www.linkedin.com/in/ali-zand-bb469115/',
+    },
+    {
+      image: '/polina_profile.jpeg',
+      alt: 'Polina\'s profile',
+      url: 'https://www.linkedin.com/in/polina-gorshenina/',
+    },
+  ];
   return (
     <div>
       <h2 className="title">ABOUT US</h2>
@@ -18,12 +30,9 @@ const About = () => {
         MORIARE PRO AMICO?
 
         <div className="images">
-          <div className="image-container left-image">
-            <img src="/ali_profile.png" className="image" alt="Ali's profile" />
-          </div>
-          <div className="image-container right-image">
-            <img src="/polina_profile.jpeg" className="image" alt="Polina's profile" />
-          </div>
+          {profiles.map((profile) => {
+            return <ProfilePicture {...profile} />;
+          })}
         </div>
       </div>
     </div>
