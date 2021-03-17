@@ -19,14 +19,10 @@ const About = () => {
 
         <div className="images">
           <div className="image-container left-image">
-            <Link to="/about/ali">
-              <img src="/ali_profile.png" className="image" alt="Ali's profile" />
-            </Link>
+            <img src="/ali_profile.png" className="image" alt="Ali's profile" />
           </div>
           <div className="image-container right-image">
-            <Link to="/about/polina">
-              <img src="/polina_profile.jpeg" className="image" alt="Polina's profile" />
-            </Link>
+            <img src="/polina_profile.jpeg" className="image" alt="Polina's profile" />
           </div>
         </div>
       </div>
