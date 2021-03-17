@@ -65,7 +65,10 @@ class Menu extends React.Component {
           }
           <i className="material-icons menu-icon" onClick={this.openSlideMenu}>menu</i>
         </div>
-        <SliderMenu closeSlideMenu={this.closeSlideMenu} clName={clName} changeMenu={this.changeMenu} />
+        <SliderMenu closeSlideMenu={this.closeSlideMenu}
+                    clName={clName}
+                    changeMenu={this.changeMenu}
+                    activeMenu={activeMenu} />
       </React.Fragment>
     )
   }

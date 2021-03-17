@@ -154,7 +154,12 @@
     cursor: pointer;
 }
 
-.menu-item:hover {
+.menu-item-current {
+    padding-left: 35px;
+    color: darkgrey;
+}
+
+.has-animation:hover {
     animation: forwards;
     animation-duration: 0.5s;
     animation-name: menu-hover;
