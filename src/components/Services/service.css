@@ -28,6 +28,7 @@
 }
 
 .service-link {
+    display: none;
     text-decoration: none;
 }
 
@@ -43,6 +44,14 @@
 }
 
 @media (max-width: 1200px) {
+    .service-link {
+        display: block;
+    }
+
+    .not-mobile {
+        display: none;
+    }
+
     .service-image-title-container {
         width: 100%;
     }

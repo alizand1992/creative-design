@@ -2,9 +2,9 @@ import React from 'react';
 
 import './service.css';
 import { Link } from 'react-router-dom';
+import ServiceImage from './ServiceImage';
 
 const Service = ({ name, image, currentService, setCurrentService }) => {
-  console.log(currentService)
   const displayClass = currentService === name || !currentService ? 'display-for-small-screen' : 'hide-for-small-screen'
   const animation = currentService === name ? 'service-click-animation' : '';
   const displaySingle = currentService === name ? 'display-single' : '';
@@ -14,13 +14,9 @@ const Service = ({ name, image, currentService, setCurrentService }) => {
   return (
     <div className={serviceContainer} onClick={() => setCurrentService(name)}>
       <Link to={`/services/${name}`} className="service-link">
-        <div className={`service-image-title-container ${animation}`}>
-          <div className="service-image-container">
-            <img src={image} className="service-image" alt={`${name} service`}/>
-          </div>
-          <div className="service-title">{name}</div>
-        </div>
+        <ServiceImage animation={animation} image={image} name={name} />
       </Link>
+      <ServiceImage animation={animation} image={image} name={name} className="not-mobile" notMobile={true} />
       <div className={`service-content ${textAnimation}`}>
         LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. OMNES ENIM IUCUNDUM MOTUM,
         QUO SENSUS HILARETUR. QUAE CUM DIXISSET PAULUMQUE INSTITISSET, QUID EST? ECCE
