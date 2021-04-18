@@ -24,17 +24,26 @@ function App() {
       <div className="App">
         <Menu />
         <Suspense fallback={<Loading />}>
-          <Switch>
-            <Route path="/about/ali">
-              <Ali />
-            </Route>
-            <Route path="/about/polina">
-              <Polina />
-            </Route>
-            <Route path="/about" >
+           {/*<Route path="/about/ali">*/}
+            {/*  <Ali />*/}
+            {/*</Route>*/}
+            {/*<Route path="/about/polina">*/}
+            {/*  <Polina />*/}
+            {/*</Route>*/}
+            {/*<Route path="/about" >*/}
+            {/*<Route path="/">*/}
+              <Home />
+            {/*</Route>*/}
               <About />
-            </Route>
-            <Route path="/services/design" >
+            {/*<Route path="/services" >*/}
+              <Services />
+            {/*</Route>*/}
+            {/*<Route path="/contact_us" >*/}
+              <ContactUs />
+            {/*</Route>*/}
+            {/*</Route>*/}
+          <Switch>
+          <Route path="/services/design" >
               <Design />
             </Route>
             <Route path="/services/code" >
@@ -45,15 +54,6 @@ function App() {
             </Route>
             <Route path="/services/upgrade" >
               <Upgrade />
-            </Route>
-            <Route path="/services" >
-              <Services />
-            </Route>
-            <Route path="/contact_us" >
-              <ContactUs />
-            </Route>
-            <Route path="/">
-              <Home />
             </Route>
           </Switch>
         </Suspense>

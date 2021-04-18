@@ -63,7 +63,7 @@ class ContactUs extends React.Component {
     const { loading } = this.state;
 
     return (
-      <div>
+      <div style={{ marginTop: '450px' }}>
         <h2 className="title">GET YOUR FREE ESTIMATE</h2>
         <h4 className="title sub-title">Contact Us</h4>
         <div className="content">
@@ -88,7 +88,7 @@ class ContactUs extends React.Component {
               </div>
             </div>
             <div style={this.state.buttonStyle}>
-              <button className="submit" onClick={this.submitForm}>
+              <button className="submit" onClick={this.submitForm} style={{ marginBottom: ' 200px' }}>
                 SEND {' '}
                 {loading &&
                   <span style={{ fontSize: '24px', position: 'relative', top: '-5px' }}>

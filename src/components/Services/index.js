@@ -15,7 +15,7 @@ const Services = () => {
   ];
 
   return (
-    <div>
+    <div style={{ marginTop: '450px' }}>
       <h2 className="title">OUR SERVICES</h2>
       <div className="content">
         <div id="services-container">
