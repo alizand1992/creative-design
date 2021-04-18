@@ -29,11 +29,7 @@ class Menu extends React.Component {
   }
 
   setActiveMenu = (pathname) => {
-    if (pathname === '/about') {
-      this.changeMenu('about')
-    } else {
-      this.changeMenu('')
-    }
+    this.changeMenu(pathname.substring(1))
   }
 
   openSlideMenu = () => {

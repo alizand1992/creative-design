@@ -31,7 +31,7 @@ const About = () => {
 
         <div className="images">
           {profiles.map((profile) => {
-            return <ProfilePicture {...profile} />;
+            return <ProfilePicture key={profile.url} {...profile} />;
           })}
         </div>
       </div>
