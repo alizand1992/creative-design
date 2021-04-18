@@ -14,6 +14,7 @@ class ContactUs extends React.Component {
       email: '',
       project: '',
       loading: false,
+      buttonStyle: { textAlign: 'center', marginTop: '54px' },
     }
   }
 
@@ -31,6 +32,26 @@ class ContactUs extends React.Component {
   changeField = (e, field) => {
     this.setState({
       [field]: e.target.value,
+    });
+  }
+
+  moveSendUp = () => {
+    console.log('up')
+    this.setState({
+      buttonStyle: {
+        ...this.state.buttonStyle,
+        marginTop: '51px',
+      },
+    });
+  }
+
+  moveSendDown = () => {
+    console.log('down')
+    this.setState({
+      buttonStyle: {
+        ...this.state.buttonStyle,
+        marginTop: '54px',
+      },
     });
   }
 
@@ -62,12 +83,13 @@ class ContactUs extends React.Component {
               <div className="contact-form-column">
                 <textarea className="contact-text-area"
                           rows={3}
+                          onFocus={this.moveSendUp}
+                          onBlur={this.moveSendDown}
                           onChange={(e) => this.changeField(e, 'project')}>
-
                 </textarea>
               </div>
             </div>
-            <div style={{ textAlign: 'center', marginTop: '54px' }}>
+            <div style={this.state.buttonStyle}>
               <button className="submit" onClick={this.submitForm}>
                 SEND {' '}
                 {loading &&
