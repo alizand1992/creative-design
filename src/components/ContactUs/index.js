@@ -36,7 +36,6 @@ class ContactUs extends React.Component {
   }
 
   moveSendUp = () => {
-    console.log('up')
     this.setState({
       buttonStyle: {
         ...this.state.buttonStyle,
@@ -46,7 +45,6 @@ class ContactUs extends React.Component {
   }
 
   moveSendDown = () => {
-    console.log('down')
     this.setState({
       buttonStyle: {
         ...this.state.buttonStyle,
