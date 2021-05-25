@@ -12,7 +12,7 @@ const Service = ({ name, image, currentService, setCurrentService }) => {
   const serviceContainer = `service-container ${displayClass} ${displaySingle}`;
 
   return (
-    <div className={serviceContainer} onClick={() => setCurrentService(name)}>
+    <div className={serviceContainer} style={{ height: '100vh' }} onClick={() => setCurrentService(name)}>
       <Link to={`/services/${name}`} className="service-link">
         <ServiceImage animation={animation} image={image} name={name} />
       </Link>

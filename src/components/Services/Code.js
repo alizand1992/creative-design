@@ -1,44 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Code = () => {
   const name = 'code';
   const image = `/${name}.png`;
 
-  const st = {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-  };
-
   return (
-    <div>
-      <div className="title" style={st}>
-        <div>
-          <Link to="/services/">
-            <span className="material-icons" style={{ fontSize: '1em', paddingTop: '10px' }}>keyboard_backspace</span>
-          </Link>
-        </div>
-        <div>{name.toUpperCase()}</div>
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div style={{ display: 'flex', flexWrap: 'wrap', flexBasis: '50%', marginLeft: '20px', backgroundColor: '#666666'  }}>
+      <div style={{ width: '100%', textAlign: 'center' }}>
+        {name.toUpperCase()}
       </div>
-      <div className="content">
-        <div style={{ width: '100%', textAlign: 'center', marginBottom: '50px' }} >
-          <div className="service-image-container">
-            <img src={image} className="service-image" alt={`${name} service`} />
-          </div>
-        </div>
-        <div>
-          LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. OMNES ENIM IUCUNDUM MOTUM,
-          QUO SENSUS HILARETUR. QUAE CUM DIXISSET PAULUMQUE INSTITISSET, QUID EST? ECCE
-          ALIUD SIMILE DISSIMILE. MIHI QUIDEM ANTIOCHUM, QUEM AUDIS, SATIS BELLE VIDERIS ATTENDERE.
-          ATQUE HAEC ITA IUSTITIAE PROPRIA SUNT, UT SINT VIRTUTUM RELIQUARUM COMMUNIA. SIN KAKAN
-          MALITIAM DIXISSES, AD ALIUD NOS UNUM CERTUM VITIUM CONSUETUDO LATINA TRADUCERET.
-          DUO REGES: CONSTRUCTIO INTERRETE. AUT, PYLADES CUM SIS, DICES TE ESSE ORESTEM, UT
-          MORIARE PRO AMICO?
-        </div>
+      <div style={{ width: '30%', textAlign: 'center' }} >
+        <img src={image} className="service-image" alt={`${name} service`} />
+      </div>
+      <div style={{ width: '70%' }}>
+        Our full-stack engineer will work closely with the designer to provide
+        the look and feel that you had in mind. We provide web applications and
+        responsive mobile web development. Our engineer will use the latest
+        technology and best coding practices not only to make your idea come
+        to life, but to also create a maintainable and expandable application.
       </div>
     </div>
-  )
+  );
 };
 
 export default Code;

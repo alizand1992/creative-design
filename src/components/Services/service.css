@@ -72,46 +72,4 @@
     .service-image {
         width: 65px
     }
-
-    /*.display-for-small-screen {*/
-    /*}*/
-
-    /*.display-single {*/
-    /*    animation-duration: 500ms;*/
-    /*    animation-name: increase-width;*/
-    /*    animation-fill-mode: forwards;*/
-    /*}*/
-
-    /*.hide-for-small-screen {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*.service-click-animation {*/
-    /*    animation-duration: 1s;*/
-    /*    animation-name: slide-center;*/
-    /*    animation-fill-mode: forwards;*/
-    /*}*/
-
-    /*.service-content.service-click-text-animation {*/
-    /*    display: block;*/
-    /*}*/
-
-    /*@keyframes increase-width {*/
-    /*    from {}*/
-    /*    to {*/
-    /*        width: 100%;*/
-    /*    }*/
-    /*}*/
-
-    /*@keyframes slide-center {*/
-    /*    from {*/
-    /*        margin-right: 0;*/
-    /*        margin-left: 0;*/
-    /*    }*/
-
-    /*    to {*/
-    /*        margin-right: 30%;*/
-    /*        margin-left: 30%;*/
-    /*    }*/
-    /*}*/
 }

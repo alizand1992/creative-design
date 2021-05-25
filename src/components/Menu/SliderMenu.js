@@ -10,10 +10,12 @@ class SliderMenu extends React.Component {
       {
         name: 'about',
         text: 'ABOUT US',
+        top: 682,
       },
       {
         name: 'services',
         text: 'OUR SERVICES',
+        top: 1258,
       },
       {
         name: 'contact_us',
@@ -31,7 +33,8 @@ class SliderMenu extends React.Component {
               return <MenuItem {...menuItem}
                                key={menuItem.name}
                                activeMenu={activeMenu}
-                               changeMenu={changeMenu}/>
+                               top={menuItem.top}
+                               changeMenu={(name, top) => { changeMenu(name, top) }} />
             })}
           </ul>
         </div>

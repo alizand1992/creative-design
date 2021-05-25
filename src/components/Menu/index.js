@@ -40,8 +40,7 @@ class Menu extends React.Component {
     this.setState({ clName: 'hide' });
   }
 
-  changeMenu = (activeMenu) => {
-    this.setState({ activeMenu });
+  changeMenu = () => {
     this.closeSlideMenu();
   }
 

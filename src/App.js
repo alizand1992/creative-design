@@ -15,8 +15,6 @@ const Upgrade = React.lazy(() => import('./components/Services/Upgrade'));
 const ContactUs = React.lazy(() => import('./components/ContactUs'));
 
 const About =  React.lazy(() => import('./components/About'));
-const Ali =  React.lazy(() => import('./components/About/Ali'));
-const Polina =  React.lazy(() => import('./components/About/Polina'));
 
 function App() {
   return (
@@ -24,26 +22,14 @@ function App() {
       <div className="App">
         <Menu />
         <Suspense fallback={<Loading />}>
-           {/*<Route path="/about/ali">*/}
-            {/*  <Ali />*/}
-            {/*</Route>*/}
-            {/*<Route path="/about/polina">*/}
-            {/*  <Polina />*/}
-            {/*</Route>*/}
-            {/*<Route path="/about" >*/}
-            {/*<Route path="/">*/}
-              <Home />
-            {/*</Route>*/}
-              <About />
-            {/*<Route path="/services" >*/}
-              <Services />
-            {/*</Route>*/}
-            {/*<Route path="/contact_us" >*/}
-              <ContactUs />
-            {/*</Route>*/}
-            {/*</Route>*/}
           <Switch>
-          <Route path="/services/design" >
+            <Route path="/" exact={true}>
+              <Home />
+              <About />
+              <Services />
+              <ContactUs />
+            </Route>
+            <Route path="/services/design" >
               <Design />
             </Route>
             <Route path="/services/code" >

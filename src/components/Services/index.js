@@ -3,25 +3,23 @@ import React, { useState } from 'react';
 import '../Common/index.css';
 import './index.css';
 
-import Service from './Service';
+import Consult from './Consult';
+import Design from './Design';
+import Code from './Code';
+import Upgrade from './Upgrade';
 
 const Services = () => {
-  const [currentService, setCurrentService] = useState();
-  const services = [
-    { name: 'Design', image: '/design.png' },
-    { name: 'Code', image: '/code.png' },
-    { name: 'Consult', image: '/consult.png' },
-    { name: 'Upgrade', image: '/upgrade.png' },
-  ];
-
   return (
-    <div style={{ marginTop: '450px' }}>
+    <div style={{ height: '100vh' }} id="services">
       <h2 className="title">OUR SERVICES</h2>
       <div className="content">
-        <div id="services-container">
-          {services.map((service) => {
-            return <Service {...service} key={service.name} currentService={currentService} setCurrentService={setCurrentService} />
-          })}
+        <div style={{ display: 'flex' }}>
+          <Design />
+          <Code />
+        </div>
+        <div>
+          <Consult />
+          <Upgrade />
         </div>
       </div>
     </div>
