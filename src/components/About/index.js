@@ -18,7 +18,7 @@ const About = () => {
     },
   ];
   return (
-    <div id="about" style={{ height: '100vh' }}>
+    <div id="about" style={{ minHeight: '1200px', paddingTop: '100px'}}>
       <h2 className="title">ABOUT US</h2>
       <div className="content">
         We believe in the power of design that can tell your company’s story and technology that can
@@ -33,6 +33,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+}
 
 export default About;

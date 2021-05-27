@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import '../Common/index.css';
 import './index.css';
@@ -10,20 +10,20 @@ import Upgrade from './Upgrade';
 
 const Services = () => {
   return (
-    <div style={{ height: '100vh' }} id="services">
+    <div style={{ display: 'block', minHeight: '1200px', paddingTop: '100px' }} id="services">
       <h2 className="title">OUR SERVICES</h2>
       <div className="content">
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', marginBottom: '40px' }}>
           <Design />
           <Code />
         </div>
-        <div>
+        <div style={{ display: 'flex'}}>
           <Consult />
           <Upgrade />
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Services

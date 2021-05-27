@@ -10,7 +10,7 @@
 
 .contact-input-text {
     width: 487px;
-    background-color: black;
+    background-color: transparent;
     color: white;
     outline: 0;
     border-width: 0 0 1px;
@@ -23,7 +23,7 @@
 
 .contact-text-area {
     width: 487px;
-    background-color: black;
+    background-color: transparent;
     color: white;
     outline: 0;
     border-width: 1px;

@@ -63,7 +63,7 @@ class ContactUs extends React.Component {
     const { loading } = this.state;
 
     return (
-      <div id="contact_us">
+      <div id="contact_us" style={{ display: 'block', minHeight: '1350px', paddingTop: '100px' }}>
         <h2 className="title">GET YOUR FREE ESTIMATE</h2>
         <h4 className="title sub-title">Contact Us</h4>
         <div className="content">
