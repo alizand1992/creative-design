@@ -4,15 +4,35 @@ const Code = () => {
   const name = 'code';
   const image = `/${name}.png`;
 
+  const containerStyle = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexBasis: '50%',
+    marginLeft: '20px',
+    backgroundColor: '#666666',
+    paddingRight: '10px',
+    paddingBottom: '10px'
+  };
+
+  const imageStyle = {
+    position: 'relative',
+    top: '35%',
+  };
+
+  const imageContainerStyle = {
+    width: '30%',
+    textAlign: 'center',
+  };
+
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', flexBasis: '50%', marginLeft: '20px', backgroundColor: '#666666'  }}>
+    <div style={containerStyle}>
       <div style={{ width: '100%', textAlign: 'center' }}>
         {name.toUpperCase()}
       </div>
-      <div style={{ width: '30%', textAlign: 'center' }} >
-        <img src={image} className="service-image" alt={`${name} service`} />
+      <div style={imageContainerStyle} >
+        <img src={image} className="service-image" alt={`${name} service`} style={imageStyle} />
       </div>
-      <div style={{ width: '70%' }}>
+      <div style={{ width: '70%', paddingLeft: '10px' }}>
         Our full-stack engineer will work closely with the designer to provide
         the look and feel that you had in mind. We provide web applications and
         responsive mobile web development. Our engineer will use the latest

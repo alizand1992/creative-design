@@ -5,13 +5,26 @@ const Upgrade = () => {
   const name = 'upgrade';
   const image = `/${name}.png`;
 
+  const containerStyle = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexBasis: '50%',
+    marginLeft: '20px',
+    backgroundColor: '#666666',
+  };
+
+  const imageStyle = {
+    position: 'relative',
+    top: '20%',
+  };
+
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', flexBasis: '50%', marginLeft: '20px', backgroundColor: '#666666'  }}>
+    <div style={containerStyle}>
       <div style={{ width: '100%', textAlign: 'center' }}>
         {name.toUpperCase()}
       </div>
       <div style={{ width: '30%', textAlign: 'center' }} >
-        <img src={image} className="service-image" alt={`${name} service`} />
+        <img src={image} className="service-image" alt={`${name} service`} style={imageStyle} />
       </div>
       <div style={{ width: '70%' }}>
         Already have a website but need help with it? We are here to assist.
