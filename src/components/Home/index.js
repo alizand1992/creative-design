@@ -5,7 +5,7 @@ import './index.css';
 class Home extends React.Component {
   render() {
     return (
-      <div className="main-container">
+      <div className="main-container" id="main">
         <div className="title-container">
           <div className="title-content title-creative">Creative</div>
           <div className="title-content title-design">Design</div>

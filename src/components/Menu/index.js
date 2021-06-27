@@ -11,25 +11,8 @@ class Menu extends React.Component {
 
     this.state = {
       clName: '',
+      activeMenu: '',
     };
-  }
-
-  componentDidMount() {
-    if (!this.state.activeMenu) {
-      this.setActiveMenu(this.props.location.pathname);
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    const { pathname } = this.props.location;
-
-    if (prevProps !== this.props) {
-      this.setActiveMenu(pathname);
-    }
-  }
-
-  setActiveMenu = (pathname) => {
-    this.changeMenu(pathname.substring(1))
   }
 
   openSlideMenu = () => {
@@ -40,7 +23,8 @@ class Menu extends React.Component {
     this.setState({ clName: 'hide' });
   }
 
-  changeMenu = () => {
+  changeMenu = (activeMenu) => {
+    this.setState({ activeMenu })
     this.closeSlideMenu();
   }
 
@@ -62,8 +46,8 @@ class Menu extends React.Component {
         </div>
         <SliderMenu closeSlideMenu={this.closeSlideMenu}
                     clName={clName}
-                    changeMenu={this.changeMenu}
-                    activeMenu={activeMenu} />
+                    activeMenu={activeMenu}
+                    changeMenu={this.changeMenu} />
       </React.Fragment>
     )
   }
