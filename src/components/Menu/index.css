@@ -1,13 +1,13 @@
 .top-menu-container {
     width: 100%;
-    min-height: 250px;
+    min-height: 150px;
     position: fixed;
     top: 0;
     z-index: 950;
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 40%,
         rgba(0, 0, 0, 1)
     );
 }
@@ -83,9 +83,9 @@
 
 /* Buttons */
 .menu-icon {
-    font-size: 3em;
+    font-size: 2em;
     position: fixed;
-    top: 7vh;
+    top: 3vh;
     right: 7vh;
     cursor: pointer;
     z-index: 998;
@@ -179,12 +179,12 @@
 
 /* Title */
 .title-container-menu {
-    font-size: 3em;
+    font-size: 1.5em;
     display: block;
     text-align: center;
     width: 200px;
     position: fixed;
-    top: 5vh;
+    top: 2.5vh;
     left: 5vh;
     cursor: pointer;
 }
@@ -195,11 +195,11 @@
 }
 
 .title-creative-menu {
-    margin-bottom: -30px;
+    margin-bottom: 0px;
 }
 
 .title-design-menu {
-    margin-top: -25px;
+    margin-top: -15px;
 }
 
 
