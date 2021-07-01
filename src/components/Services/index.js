@@ -10,14 +10,14 @@ import Upgrade from './Upgrade';
 
 const Services = () => {
   return (
-    <div style={{ display: 'block', minHeight: '1200px', paddingTop: '100px' }} id="services">
+    <div id="services">
       <h2 className="title">OUR SERVICES</h2>
       <div className="content">
-        <div style={{ display: 'flex', marginBottom: '40px' }}>
+        <div className="service-row with-margin">
           <Design />
           <Code />
         </div>
-        <div style={{ display: 'flex'}}>
+        <div className="service-row">
           <Consult />
           <Upgrade />
         </div>

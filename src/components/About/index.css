@@ -20,3 +20,19 @@
     border-radius: 150px;
 }
 
+#about {
+    min-height: 1200px;
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        padding-top: 0;
+    }
+
+    #about {
+        padding-top: 0;
+        height: 900px;
+        min-height: 900px;
+    }
+}

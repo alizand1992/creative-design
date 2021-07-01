@@ -5,11 +5,6 @@ const Code = () => {
   const image = `/${name}.png`;
 
   const containerStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexBasis: '50%',
-    marginLeft: '20px',
-    backgroundColor: '#666666',
     paddingRight: '10px',
     paddingBottom: '10px'
   };
@@ -25,7 +20,7 @@ const Code = () => {
   };
 
   return (
-    <div style={containerStyle}>
+    <div className="service-container right" style={containerStyle}>
       <div style={{ width: '100%', textAlign: 'center' }}>
         {name.toUpperCase()}
       </div>

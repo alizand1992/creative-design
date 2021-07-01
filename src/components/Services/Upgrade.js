@@ -1,17 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Upgrade = () => {
   const name = 'upgrade';
   const image = `/${name}.png`;
-
-  const containerStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexBasis: '50%',
-    marginLeft: '20px',
-    backgroundColor: '#666666',
-  };
 
   const imageStyle = {
     position: 'relative',
@@ -19,7 +10,7 @@ const Upgrade = () => {
   };
 
   return (
-    <div style={containerStyle}>
+    <div className="service-container right">
       <div style={{ width: '100%', textAlign: 'center' }}>
         {name.toUpperCase()}
       </div>

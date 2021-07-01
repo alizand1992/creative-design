@@ -18,7 +18,7 @@ const About = () => {
     },
   ];
   return (
-    <div id="about" style={{ minHeight: '1200px', paddingTop: '100px'}}>
+    <div id="about">
       <h2 className="title">ABOUT US</h2>
       <div className="content">
         We believe in the power of design that can tell your company’s story and technology that can

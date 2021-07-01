@@ -1,11 +1,67 @@
-#services-container {
+.service-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    background-color: #666666;
 }
 
-@media (max-width: 850px) {
-    #services-container {
-        flex-wrap: wrap;
+.with-margin {
+    margin-bottom: 40px;
+}
+
+.left {
+    margin-right: 20px;
+}
+
+.right {
+    margin-left: 20px;
+}
+
+.service-row {
+    display: flex;
+}
+
+#service {
+    display: block;
+    min-height: 1200px;
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 1540px) {
+    .content {
+        padding-right: 5%;
+        padding-left: 5%;
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .service-row {
+        flex-wrap: wrap;
+    }
+
+    .service-container {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        min-height: 200px;
+    }
+
+    .with-margin {
+        margin-bottom: 0;
+    }
+
+    .left {
+        margin-right: 0;
+    }
+
+    .right {
+        margin-left: 0;
+    }
+
+    .content {
+        /*min-height: 1200px;*/
+    }
+
+    #services {
+        min-height: 1300px;
+    }
+}

@@ -5,7 +5,7 @@ const Design = () => {
   const image = `/${name}.png`;
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', flexBasis: '50%', marginRight: '20px', backgroundColor: '#666666' }}>
+    <div className="service-container left">
       <div style={{ width: '100%', textAlign: 'center', height: '36px' }}>
         {name.toUpperCase()}
       </div>

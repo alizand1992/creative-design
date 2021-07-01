@@ -3,7 +3,7 @@ import React from 'react';
 import './index.css';
 import SliderMenu from './SliderMenu';
 import { withRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 class Menu extends React.Component {
   constructor(props) {
@@ -35,7 +35,9 @@ class Menu extends React.Component {
       <React.Fragment>
         <div className="top-menu-container">
           {activeMenu !== '' &&
-            <Link to="/">
+            <Link to="main"
+                  spy={true}
+                  smooth={true}>
               <div className="title-container-menu">
                 <div className="title-content-menu title-creative-menu">Creative</div>
                 <div className="title-content-menu title-design-menu">Design</div>
