@@ -12,10 +12,15 @@ class ContactUs extends React.Component {
       name: '',
       company_name: '',
       email: '',
+      error: '',
       project: '',
       loading: false,
       buttonStyle: { textAlign: 'center', marginTop: '54px' },
     }
+  }
+
+  validateInputs = (inputs) => {
+    return Object.values(inputs).every(input => input.trim().length !== 0);
   }
 
   submitForm = (e) => {
@@ -23,14 +28,43 @@ class ContactUs extends React.Component {
     const { name, company_name, email, project } = this.state;
     this.setState({ loading: true });
 
-    console.log({ name, company_name, email, project });
-    window.setTimeout(() => {
-      this.setState({ loading: false });
-    }, 3000);
+    const inputs = { name, company_name, email, project };
+    const inputsAreValid = this.validateInputs(inputs);
+
+    if (inputsAreValid) {
+      const call = async () => {
+        await fetch(
+          'http://localhost:5000/contact_us',
+          {
+            method: 'POST',
+            mode:'cors',
+            cache: 'no-cache',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(inputs),
+          }
+        ).then((response) => {
+          console.log(response);
+        }).catch((error) => {
+          console.log(error);
+        });
+      };
+
+      call();
+
+      window.setTimeout(() => {
+        this.setState({ loading: false });
+      }, 3000);
+    } else {
+      this.setState({ loading: false, error: 'All fields are required.' });
+    }
   }
 
   changeField = (e, field) => {
     this.setState({
+      error: '',
       [field]: e.target.value,
     });
   }

@@ -21,8 +21,6 @@ class SliderMenu extends React.Component {
       },
     ];
 
-    console.log(activeMenu)
-
     return (
       <React.Fragment>
         <div className="gray-overlay" style={{ display }} onClick={closeSlideMenu}></div>
