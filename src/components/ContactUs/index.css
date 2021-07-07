@@ -44,6 +44,10 @@
     font-size: 45px;
 }
 
+.disabled {
+    background-color: #444444;
+}
+
 #contact_us {
     display: block;
     min-height: 1350px;

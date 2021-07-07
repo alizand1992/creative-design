@@ -15,6 +15,7 @@ class ContactUs extends React.Component {
       error: '',
       project: '',
       loading: false,
+      valid: false,
       buttonStyle: { textAlign: 'center', marginTop: '54px' },
     }
   }
@@ -34,7 +35,7 @@ class ContactUs extends React.Component {
     if (inputsAreValid) {
       const call = async () => {
         await fetch(
-          'http://localhost:5000/contact_us',
+          'http://localhost:5000/contact',
           {
             method: 'POST',
             mode:'cors',
@@ -46,26 +47,35 @@ class ContactUs extends React.Component {
             body: JSON.stringify(inputs),
           }
         ).then((response) => {
+          this.setState({ loading: false });
           console.log(response);
         }).catch((error) => {
+          this.setState({ loading: false });
           console.log(error);
         });
       };
 
       call();
-
-      window.setTimeout(() => {
-        this.setState({ loading: false });
-      }, 3000);
     } else {
       this.setState({ loading: false, error: 'All fields are required.' });
     }
   }
 
   changeField = (e, field) => {
+    const { name, company_name, email, project } = this.state;
+
+    const inputs = {
+      name,
+      company_name,
+      email,
+      project,
+      [field]: e.target.value,
+    }
+
     this.setState({
       error: '',
-      [field]: e.target.value,
+      valid: this.validateInputs(inputs),
+      ...inputs
     });
   }
 
@@ -94,13 +104,25 @@ class ContactUs extends React.Component {
       { label: 'email', text: 'EMAIL' },
     ];
 
-    const { loading } = this.state;
+    const { loading, valid } = this.state;
+
+    const requiredNotificationStyle = {
+      fontSize: '80%',
+      color: 'gray',
+    };
 
     return (
       <div id="contact_us">
         <h2 className="title">GET YOUR FREE ESTIMATE</h2>
         <h4 className="title sub-title">Contact Us</h4>
         <div className="content">
+          <div className="contact-form-row">
+            <div className="contact-form-column"
+                 style={requiredNotificationStyle}>
+              All fields are required.
+            </div>
+            <div className="contact-form-column" />
+          </div>
           <form>
             {questions.map((question) => {
               return <FormRow {...question}
@@ -122,7 +144,7 @@ class ContactUs extends React.Component {
               </div>
             </div>
             <div style={this.state.buttonStyle}>
-              <button className="submit" onClick={this.submitForm}>
+              <button className={`submit ${!valid ? 'disabled' : ''}`} onClick={this.submitForm} disabled={!valid}>
                 SEND {' '}
                 {loading &&
                   <span style={{ fontSize: '24px', position: 'relative', top: '-5px' }}>
