@@ -3,6 +3,7 @@ import React from 'react';
 import '../Common/index.css';
 import FormRow from './FormRow';
 import { Spinner } from 'react-bootstrap';
+import SuccessModal from './SuccessModal';
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class ContactUs extends React.Component {
       project: '',
       loading: false,
       valid: false,
+      showModal: false,
       buttonStyle: { textAlign: 'center', marginTop: '54px' },
     }
   }
@@ -47,7 +49,10 @@ class ContactUs extends React.Component {
             body: JSON.stringify(inputs),
           }
         ).then((response) => {
-          this.setState({ loading: false });
+          this.setState({ loading: false, showModal: true });
+          window.setTimeout(() => {
+            this.setState({ showModal: false });
+          }, 30 * 1000);
           console.log(response);
         }).catch((error) => {
           this.setState({ loading: false });
@@ -97,6 +102,10 @@ class ContactUs extends React.Component {
     });
   }
 
+  closeModal = () => {
+    this.setState({ showModal: false });
+  }
+
   render() {
     const questions = [
       { label: 'name', text: 'YOUR NAME' },
@@ -104,7 +113,7 @@ class ContactUs extends React.Component {
       { label: 'email', text: 'EMAIL' },
     ];
 
-    const { loading, valid } = this.state;
+    const { loading, valid, showModal } = this.state;
 
     const requiredNotificationStyle = {
       fontSize: '80%',
@@ -113,6 +122,7 @@ class ContactUs extends React.Component {
 
     return (
       <div id="contact_us">
+        {showModal && <SuccessModal closeModal={this.closeModal} />}
         <h2 className="title">GET YOUR FREE ESTIMATE</h2>
         <h4 className="title sub-title">Contact Us</h4>
         <div className="content">

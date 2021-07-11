@@ -74,3 +74,9 @@
         margin-bottom: 0;
     }
 }
+
+@media screen and (max-width: 666px) {
+    #contact_us {
+        margin-top: 600px;
+    }
+}

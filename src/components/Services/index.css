@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     flex-basis: 50%;
     background-color: #666666;
+    min-height: 406px;
 }
 
 .with-margin {
@@ -42,7 +43,7 @@
     .service-container {
         flex-basis: 100%;
         margin-bottom: 20px;
-        min-height: 200px;
+        min-height: 263px;
     }
 
     .with-margin {
@@ -63,5 +64,15 @@
 
     #services {
         min-height: 1300px;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .service-container {
+        min-height: 406px;
+    }
+
+    #services {
+        margin-top: 300px;
     }
 }
